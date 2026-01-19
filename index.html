@@ -9,6 +9,7 @@
 	<title>Deep Live Cam VFX - Free Real-time Face Swap AI Software | Download Now</title>
 	<meta name="description" content="Download Deep Live Cam FREE - Professional real-time face swap software for streaming, video calls. Swap faces instantly with AI. Windows 10/11 compatible, NVIDIA GPU support.">
 	<meta name="keywords" content="deep live cam, real-time face swap, face swap AI, deepfake software, free face swap, webcam face swap, AI video tool, streaming software, video call effects">
+	
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2MN0CZX8M"></script>
 <script>
@@ -18,6 +19,29 @@
 
   gtag('config', 'G-K2MN0CZX8M');
 </script>
+
+	<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2MN0CZX8M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Sitemap Reference -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml">
+
+<!-- Robots Meta -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Verify Ownership (nếu có) -->
+<meta name="google-site-verification" content="your-verification-code">
+<meta name="yandex-verification" content="your-yandex-code">
+<meta name="msvalidate.01" content="your-bing-code">
+	
 	<!-- Open Graph / Social Media -->
 	<meta property="og:title" content="Deep Live Cam - Real-time Face Swap AI Software">
 	<meta property="og:description" content="Swap faces in real-time during streaming or video calls. Free download with full features.">
@@ -1422,6 +1446,47 @@
 		]
 	}
 	</script>
+
+	<!-- Enhanced Analytics Script -->
+<script src="./analytics.js"></script>
+
+<!-- Real-time visitor counter (optional) -->
+<div id="visitor-counter" style="position: fixed; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); 
+     color: #00c2ff; padding: 5px 10px; border-radius: 10px; font-size: 0.8rem; z-index: 9999;">
+    👥 <span id="live-visitors">Loading...</span> online
+</div>
+
+<script>
+// Simple visitor counter (using localStorage for demo)
+function updateVisitorCounter() {
+    if (typeof localStorage !== 'undefined') {
+        let visitors = JSON.parse(localStorage.getItem('site_visitors')) || [];
+        const now = Date.now();
+        const visitorId = Math.random().toString(36).substr(2, 9);
+        
+        // Remove old entries (10 minutes)
+        visitors = visitors.filter(v => now - v.time < 600000);
+        
+        // Add current visitor
+        const existingIndex = visitors.findIndex(v => v.id === localStorage.getItem('visitor_id'));
+        if (existingIndex === -1) {
+            visitors.push({ id: visitorId, time: now });
+            localStorage.setItem('visitor_id', visitorId);
+        } else {
+            visitors[existingIndex].time = now;
+        }
+        
+        // Save and display
+        localStorage.setItem('site_visitors', JSON.stringify(visitors));
+        document.getElementById('live-visitors').textContent = visitors.length;
+        
+        // Update every 30 seconds
+        setTimeout(updateVisitorCounter, 30000);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', updateVisitorCounter);
+</script>
 	
 	<!-- Additional SEO Meta -->
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml">
