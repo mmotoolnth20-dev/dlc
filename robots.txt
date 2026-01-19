@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://deeplivecamvfx.com/sitemap.xml
+
+# Crawl delay for search engines
+Crawl-delay: 1
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Disallow: /private/
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /private/
+Crawl-delay: 5
